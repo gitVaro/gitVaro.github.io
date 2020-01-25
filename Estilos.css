@@ -1,0 +1,274 @@
+body {
+    margin-top: 75px;
+    margin-bottom: 0;
+    background-color: white;
+}
+
+.nombreEmpresa {
+    font-size: 1.5em;
+    font-family: 'Lobster Two', cursive;
+}
+
+.navbar {
+    height: 100px;
+    font-size: 1.2em;
+    background-color: white;
+}
+
+.navbar img {
+    width: 15%;
+    display: block;
+    margin: 0 auto;
+}
+
+.nav-item {
+    margin: 0 auto;
+    padding: 1em 0;
+}
+
+.footer {
+    background-color: lightblue;
+    font-family: 'Lobster Two', cursive;
+}
+
+.fb-ic {
+    color: black;
+}
+
+.fb-ic:hover {
+    color: grey;
+}
+
+.jumbotron-fluid {
+    background-color: rgb(169, 177, 251);
+    padding: 3em;
+    margin-bottom: 2em;
+}
+
+.logoBanner {
+    width: 7%;
+    display: block;
+    margin: 3em auto;
+}
+
+.card-deck .card-header {
+    font-size: 1.8em;
+    font-family: 'Lobster Two', cursive;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel {
+    width: 50%;
+    margin: 4em auto;
+}
+
+.carousel-item {
+    height: 500px;
+}
+
+.carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    margin: 0 1.5em;
+    background-color: black;
+}
+
+.carousel-indicators {
+    top: 20px;
+}
+
+.map-container-6 {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.map-container-6 iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+
+/*/////////////// ANIMACIÓN //////////////*/
+
+.cont-anim {
+    background-color: lightskyblue;
+    position: relative;
+}
+
+.suelo {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.muñeco {
+    position: absolute;
+    bottom: 0px;
+    background-image: url('Imágenes/MuñecoNieve.png');
+    background-position: bottom;
+    background-size: cover;
+    bottom: 0;
+    left: 50px;
+    height: 300px;
+    width: 160px;
+    z-index: 1;
+}
+
+.cont-anim:hover .muñeco {
+    animation: muñeco .5s linear alternate infinite;
+}
+
+@keyframes nieve {
+    from {
+        top: -10px;
+    }
+    to {
+        top: 850px;
+    }
+}
+
+@keyframes copos {
+    0% {
+        transform: rotate(-180deg) translate(0px, 0px);
+    }
+    100% {
+        transform: rotate(180deg) translate(10px, 75px);
+    }
+}
+
+@keyframes muñeco {
+    0% {
+        transform: translate(0, 0) scale(1, 1);
+    }
+    50% {
+        transform: translate(0, -30%) scale(.7, 1.5);
+    }
+    100% {
+        transform: translate(0, -100%) scale(1.5, .7);
+    }
+}
+
+@keyframes hojas-vert {
+    0% {
+        top: -10px;
+        transform: rotate(0deg);
+    }
+    20% {
+        top: 100px;
+        transform: rotate(-60deg);
+    }
+    60% {
+        top: 300px;
+        transform: rotate(30deg);
+    }
+    100% {
+        top: 535px;
+        transform: rotate(-40deg);
+    }
+}
+
+@keyframes hojas-hor {
+    0% {
+        left: 20%;
+    }
+    20% {
+        left: 50%;
+    }
+    60% {
+        left: 20%;
+    }
+    100% {
+        left: 70%;
+    }
+}
+
+.nieve div {
+    position: absolute;
+    top: -40px;
+    animation: nieve ease-in infinite, copos ease-in-out infinite;
+}
+
+.nieve a {
+    margin-top: 150px;
+}
+
+.copos {
+    color: #fff;
+    font-size: 1em;
+    position: absolute;
+}
+
+.hojas {
+    /* color: rgb(139, 96, 55); */
+    color: saddlebrown;
+    position: absolute;
+    z-index: 1;
+}
+
+.hojas.h1 {
+    left: 30%;
+    animation: hojas-hor 7s ease-in-out infinite, hojas-vert 7s ease-in-out infinite;
+}
+
+.hojas.h2 {
+    left: 10%;
+    font-size: 1.6em;
+    animation: hojas-hor 5s ease-in-out infinite reverse, hojas-vert 5s ease-in-out infinite;
+}
+
+.copos.c1 {
+    left: 10%;
+    animation-duration: 5s;
+}
+
+.copos.c2 {
+    font-size: 1.8em;
+    left: 20%;
+    animation-duration: 7s;
+}
+
+.copos.c3 {
+    left: 15%;
+    animation-duration: 9s;
+}
+
+.copos.c4 {
+    font-size: 1.5em;
+    left: 30%;
+    animation-duration: 6s;
+}
+
+.copos.c5 {
+    left: 45%;
+    animation-duration: 4s;
+}
+
+.copos.c6 {
+    font-size: 1.8em;
+    left: 60%;
+    animation-duration: 7s;
+}
+
+.copos.c7 {
+    left: 70%;
+    animation-duration: 9s;
+}
+
+.copos.c8 {
+    font-size: 1.5em;
+    left: 90%;
+    animation-duration: 4s;
+}

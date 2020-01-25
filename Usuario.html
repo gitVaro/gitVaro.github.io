@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Lobster+Two&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="icon" href="Imágenes/Icono.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="Estilos.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Práctica 2</title>
+
+</head>
+
+<body>
+
+
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <button class="btn btn-dark d-md-none" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                                    <i class="material-icons" style="color: white; font-size: 2em;">filter_list</i>
+                                        </button>
+            <a class="navbar-brand d-md-block" href="Principal.html" style="font-family:'Lobster Two', cursive;font-size: 1.8em;">! Desconecta ¡</a>
+
+            <div class="collapse navbar-collapse navbar-dark bg-dark" id="navbarTogglerDemo03">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active mx-4">
+                        <a class="nav-link" href="Principal.html">INICIO<span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link active" href="Ubicación.html">UBICACIÓN - CONTACTO</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link active text-dark" href="Usuario.html">
+                            <i class="fas fa-user fa-lg" style="color: white;"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="jumbotron-fluid d-none d-md-block" style="padding: 1em;">
+        <div class="container-fluid" style="width: 100%;">
+            <img class="logoBanner d-none d-md-block" style="width: 10%;" src="Imágenes/LogoBN.svg" alt="Logo">
+            <p class="descripción font-weight-light shadow-lg text-center" style=" width: 50%; font-size: 1.5em; margin:2em auto; padding: 0.5em 0.5em; font-family: 'Lobster Two', cursive;">
+                Inicia sesión o crea una nueva cuenta.
+            </p>
+        </div>
+    </div>
+
+    <div class="jumbotron-fluid d-block d-md-none" style="padding: 1em;">
+        <div class="container-fluid" style="width: 100%;">
+            <p class="descripción font-weight-light shadow-lg text-center" style=" width: 100%; font-size: 1.5em; margin:2em auto; padding: 0.5em 0.5em; font-family: 'Lobster Two', cursive;">
+                Inicia sesión o crea una nueva cuenta.
+            </p>
+        </div>
+    </div>
+
+    <div class="container w-50 text-center">
+        <picture>
+            <source media="(min-width: 650px)" srcset="Imágenes/Usuario.png">
+            <source media="(min-width: 475px)" srcset="Imágenes/UsuarioSm.png">
+            <source media="(min-width: 350px)" srcset="Imágenes/UsuarioXs.png">
+            <img src="Imágenes/UsuarioXs.png">
+        </picture>
+    </div>
+
+    <div class="container-fluid">
+        <div class="card shadow border-0 d-block d-lg-none" style="margin: 3em auto;">
+            <div class="card-header border-bottom-0 bg-white">
+                <ul class="nav nav-tabs justify-content-center pt-4" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active text-dark font-weight-bold" id="pills-login-tab" data-toggle="pill" href="#pills-login" role="tab" aria-controls="pills-login" aria-selected="true">Iniciar sesión</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark font-weight-bold" id="pills-register-tab" data-toggle="pill" href="#pills-register" role="tab" aria-controls="pills-register" aria-selected="false">Registrarse</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card-body pb-4">
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab">
+                        <form>
+                            <div class="form-group">
+                                <i class="fas fa-user"></i>
+                                <input type="text" name="text" class="form-control" id="text" placeholder="Nombre de usuario" required autofocus>
+                            </div>
+
+                            <div class="form-group">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" name="password" class="form-control" id="password" id="password" placeholder="Contraseña" required>
+                            </div>
+
+                            <div class="text-center pt-4">
+                                <button class="btn btn-outline-light" style="background-color: rgb(169, 177, 251); padding: 1em; border-radius:45px;">ACCEDER</button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="pills-register-tab">
+                        <form>
+                            <div class="form-group">
+                                <i class="fas fa-user"></i>
+                                <input type="text" name="username" id="name" class="form-control" placeholder="Nombre de usuario" required autofocus>
+                            </div>
+
+                            <div class="form-group">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Correo electrónico" required>
+                            </div>
+
+                            <div class="form-group">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" name="password" id="password" class="form-control" placeholder="Escribe una contraseña" required>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="password" name="password_confirmation" id="password-confirm" class="form-control" placeholder="Confirma la contraseña" required>
+                            </div>
+                            <div class="text-center pt-2 pb-1">
+                                <button class="btn btn-outline-light" style="background-color: rgb(169, 177, 251); padding: 1em; border-radius:45px;">REGISTRARSE</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow border-0 d-none d-lg-block w-50" style="margin: 3em auto;">
+            <div class="card-header border-bottom-0 bg-white">
+                <ul class="nav nav-tabs justify-content-center pt-4" id="pills-tab2" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active text-dark font-weight-bold" id="pills-login-tab2" data-toggle="pill" href="#pills-login2" role="tab" aria-controls="pills-login" aria-selected="true">Iniciar sesión</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark font-weight-bold" id="pills-register-tab2" data-toggle="pill" href="#pills-register2" role="tab" aria-controls="pills-register" aria-selected="false">Registrarse</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card-body pb-4">
+                <div class="tab-content" id="pills-tabContent2">
+                    <div class="tab-pane fade show active" id="pills-login2" role="tabpanel" aria-labelledby="pills-login-tab">
+                        <form>
+                            <div class="form-group">
+                                <i class="fas fa-user"></i>
+                                <input type="text" name="text" class="form-control" id="text" placeholder="Nombre de usuario" required autofocus>
+                            </div>
+
+                            <div class="form-group">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" name="password" class="form-control" id="password" id="password" placeholder="Contraseña" required>
+                            </div>
+
+                            <div class="text-center pt-4">
+                                <button class="btn btn-outline-light" style="background-color: rgb(169, 177, 251); padding: 1em; border-radius:45px;">ACCEDER</button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-register2" role="tabpanel" aria-labelledby="pills-register-tab">
+                        <form>
+                            <div class="form-group">
+                                <i class="fas fa-user"></i>
+                                <input type="text" name="username" id="name" class="form-control" placeholder="Nombre de usuario" required autofocus>
+                            </div>
+
+                            <div class="form-group">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Correo electrónico" required>
+                            </div>
+
+                            <div class="form-group">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" name="password" id="password" class="form-control" placeholder="Escribe una contraseña" required>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="password" name="password_confirmation" id="password-confirm" class="form-control" placeholder="Confirma la contraseña" required>
+                            </div>
+                            <div class="text-center pt-2 pb-1">
+                                <button class="btn btn-outline-light" style="background-color: rgb(169, 177, 251); padding: 1em; border-radius:45px;">REGISTRARSE</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer ">
+
+        <div class="container ">
+
+            <div class="d-none d-md-block text-center py-3 ">
+                <img style="width: 5%; padding: 1em 0; " src="Imágenes/LogoColor.svg " alt="Logo ">
+                <p>C/ María Magdalena, Nº 23</p>
+                <p>Dos Hermanas (Sevilla)</p>
+                <p>Tfno.:934214785</p>
+                <p>desconecta@gmail.com</p>
+                <a href="https://www.facebook.com/" target="_blank" class="fb-ic ">
+                    <i class="fab fa-facebook fa-lg "></i>
+                </a>
+            </div>
+
+            <div class="text-center py-3 d-block d-md-none" style="font-size: 1.2em; ">
+                <img style="width: 10%; padding: 1em 0; " src="Imágenes/LogoColor.svg " alt="Logo ">
+                <p>C/ María Magdalena, Nº 23</p>
+                <p>Dos Hermanas (Sevilla)</p>
+                <p>Tfno.:934214785</p>
+                <p>desconecta@gmail.com</p>
+                <a href="https://www.facebook.com/" target="_blank" class="fb-ic ">
+                    <i class="fab fa-facebook fa-lg "></i>
+                </a>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
